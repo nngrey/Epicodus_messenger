@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  database: messaging_development
+
+test:
+  adapter: postgresql
+  database: messaging_test
+
+production:
+  adapter: postgresql
+  database: messaging_production

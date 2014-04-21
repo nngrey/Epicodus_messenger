@@ -1,0 +1,15 @@
+<%= render 'layouts/error', :object => @contact %>
+<%= form_for @contact do |f| %>
+
+  <div class="form_group">
+    <%=f.label :name, "Enter Name" %> <br>
+    <%=f.text_field :name %>
+  </div>
+
+  <div class="form_group">
+    <%=f.label :number, "Enter Number" %> <br>
+    <%=f.text_field :number %>
+  </div> <br>
+
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>
