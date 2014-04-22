@@ -12,6 +12,7 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
+    authorize! :create, @contact
     if @contact.save
       flash[:notice] = 'New contact created.'
       redirect_to contacts_path
@@ -26,10 +27,13 @@ class ContactsController < ApplicationController
 
   def edit
     @contact = Contact.find params[:id]
+    authorize! :edit, @contact
+
   end
 
   def update
     @contact = Contact.find params[:id]
+    authorize! :update, @contact
     if @contact.update(contact_params)
       flash[:notice] = 'Contact updated.'
       redirect_to contact_path(@contact)
@@ -40,12 +44,13 @@ class ContactsController < ApplicationController
 
   def destroy
     @contact = Contact.find params[:id]
+    authorize! :destroy, @contact
     @contact.destroy
   end
 
 private
 
   def contact_params
-    params.require(:contact).permit(:name, :number)
+    params.require(:contact).permit(:name, :number, :user_id)
   end
 end
