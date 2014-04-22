@@ -12,6 +12,7 @@ gem 'rghost'
 gem 'bcrypt'
 gem 'devise'
 gem 'rest-client'
+gem 'cancancan'
 
 group :development do
   gem 'better_errors'
