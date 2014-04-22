@@ -11,13 +11,19 @@
         <h3>Contacts</h3>
         <% @contacts.each do |contact| %>
           <%= link_to contact.name, contact_path(contact) %>
-          <a href="" id="text"><em>Send Text</em></a> <br>
+          <% if current_user %>
+          <p class="text" data-tonum="<%= contact.number %>" data-fromnum="<%= current_user.number %>"<em>Send Text</em></p> <br>
+          <% end %>
         <% end %>
       </div>
     </div>
   </div>
 
-
-
-
-
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("p.text").click(function() {
+        $("input#message_to").val(this.getAttribute("data-tonum"));
+        $("input#message_from").val(this.getAttribute("data-fromnum"));
+      });
+    });
+  </script>
