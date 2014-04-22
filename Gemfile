@@ -11,6 +11,7 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'rghost'
 gem 'bcrypt'
 gem 'devise'
+gem 'rest-client'
 
 group :development do
   gem 'better_errors'
@@ -28,6 +29,7 @@ group :test, :development do
   gem 'letter_opener'
   gem 'poltergeist'
   gem 'faker'
+  gem 'dotenv-rails'
 end
 
 group :test do
