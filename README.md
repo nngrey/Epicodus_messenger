@@ -7,7 +7,6 @@ Build an app that lets users send text messages to their friends.
 - As a user, I want to send a text message to a phone number, so that I can send texts from the web. Hint: Follow along with the lesson.
 - As a user, I want to save contacts to an address book, so that it's easy to text them again without re-typing their phone number.
 - As a user, I want to send a message to more than one person at once, so that I can mass text my friends.
-- As a user, I want to send pictures in my messages, so that I can share photos and cute cat pics with my friends. Hint: Check the Twilio API docs.
 - As a user who receives a text message, if I text back, I want to get an automated response telling me that the phone number can't receive texts, so that I don't get sad when the sender doesn't reply. Hint: This will be a bit hard, and I don't expect you to necessarily finish this. Here are some pointers:
 - When Twilio receives a text message to one of your phone numbers, it will make an HTTP request to your server. On Heroku, this is easy, but to work on your development machine, you'll need a "tunnel" that Twilio can reach your computer through. One nice, free option is localtunnel.me. Set that up first.
 
