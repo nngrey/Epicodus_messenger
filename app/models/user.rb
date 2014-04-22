@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
   has_many :messages
   has_many :contacts
+
+  validates :number, presence: true
 end
